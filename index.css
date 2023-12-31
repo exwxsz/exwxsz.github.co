@@ -1,0 +1,264 @@
+.纸张{
+    width: 1440px;
+    height: auto;
+    /* border:X像素 solid实线(虚线dashed,点线:dotted) 颜色 */
+    /* border:1px solid hsl(0, 55%, 43%) */
+    /* border边框：单个取值的连写，空格隔开 */
+}
+
+.video{
+    height: 100%;
+    width: 100%;
+    position: absolute; /*设置绝对定位，对 div顶部的绝对定位*/
+    top: 0;
+    left: 0;
+    object-fit: cover; /* 保持视频的宽高比并填充整个容器 */
+}
+
+.顶部{
+    width: 1440px;
+    height: 450px;
+    /* border-bottom: 2vh solid #949; */
+    position: relative;
+    overflow: hidden; /*超出容器的部分隐藏*/
+    /* background-size: 100%; */
+    /* 背景大小 */
+    /* background-repeat: no-repeat;  */
+}
+
+.左框{
+    width: 450px;
+    height: 100%;
+    /* border-方位词(right,bottom,left) */
+    /* border-right: 1px dashed #000; */
+    overflow: hidden;
+    /* 超出盒子大小的部分隐藏 */
+}
+.左框 img{
+    /* img为引入 则需要输入单独的img */
+    width: 150px;
+    height:150px;
+    border-radius: 100px 100px 100px 100px;
+    object-fit: cover;
+    /* 图片裁剪至填充整个盒子 */
+    position: relative;
+    top: 30px; 
+    left: 45px;   
+    /* position（定位）：relativ（相对定位） */
+}
+.font-bar p{
+    text-indent: 2em;
+    /* 文本空格3*16=px */
+    line-height: 20px;
+    /* 文本下移（空行高） */
+    font-size: 1.5em;
+    /* 字体放大20px */
+}
+.右框{
+    width: 1000px;
+    height: auto;
+    /* border-left: 1px dashed #000; */
+    position: absolute;
+    left: 50px;
+}
+
+/* 设置flexbox弹性布局 */
+.弹性布局{
+    /* 我测泥马，因为html的div代码太乱了导致这个地方不生效，进行排查了1个多小时 */
+    display:flex ;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+    /* 内容区和边框之间为内边距padding */
+    /* 边框外部为外边距margin */
+    /* padding: 40px 20px 50px 100px ; */
+    /* 添加4个方向的内边距,上40，right20，btom50，left100，顺时针具有对称性 */
+
+
+/* 设置进度条容器的样式 */
+.progress-bar {/*选择progress-bar*/
+    width: 100%; /* 进度条容器宽度为100% */
+    height: 20px; /* 进度条容器高度为20像素 */
+    background-color: #f2f2f2; /* 设置背景颜色为灰色 */
+    border-radius: 10px; /* 设置圆角边框 */
+    margin-top: 20px; /* 设置上边距为20像素 */
+  }
+  
+  /* 设置进度条的样式 */
+  .progress {
+    height: 100%; /* 进度条高度为100% */
+    background-color: #4caf50; /* 设置进度条颜色为绿色 */
+    border-radius: 10px; /* 设置圆角边框 */
+    transition: width 0.5s ease; /* 进度条宽度变化时增加动画效果 */
+  }
+  
+  ul>p{
+    font-size: 20px;
+    text-shadow: 0 2px 1px #Ff66cc; /*模糊程度，下移，右移，颜色 （数值可为负）*/
+    line-height: 1px; /*设置行高使文字接近进度条*/
+    text-indent: 5px;
+    font-weight: 900;
+}
+
+.动画盒子{
+    position: absolute;
+    left: 1436px;;
+    animation: boxmove;
+    animation-iteration-count: infinite; /*无限循环或者写入循环几次*/
+    animation-timing-function: linear; /*linear设置运动速度始终相同*/
+    animation-duration: 5s; /*time：设置运动时间为2s*/
+    animation-direction: alternate-reverse;
+    border-radius: 100px 100px 100px 100px ;
+}
+
+@keyframes boxmove
+{
+    /* 百分之为整个运动程度即过程，top为具体的位置 */
+    0% {top:0px;}
+    25% {top: 575px;}
+    50% {top: 1150px;}
+    75% {top:1725px}
+    100% {top:2300px;}
+}
+
+
+.下页布局{
+    height: 100%;
+    width: 100%;
+}
+
+.下页背景{
+    height: 100%;
+    width: 100%;
+    position: fixed; /*使用定位fixed定位全网页*/
+    top: 0;
+    left: 0;
+    object-fit: cover; /*隐藏超出盒子的部分*/
+    z-index: -1; /* 将视频元素的堆叠顺序设置为最低 */
+}
+
+.transition-box{
+    width: 900px;
+    height: 900px;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    /* border: 2px solid #Ff66cc; */
+    overflow: hidden;
+}
+
+.展示卡1{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.展示卡1 p{
+    position: relative;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.展示卡1 img{
+    width: 400px;
+    height: 200px;
+}
+
+
+.文字{
+    font-size: 1.4em;
+    color: #FFcccc;
+    position: relative;
+    left: 40px;
+    white-space: pre-wrap;width: 400px;
+    font-weight: 800;
+}
+
+.p1{
+    font-size: 1.99em;
+    color: #ffcc45;
+    text-shadow: 2px 0 5px #Ff66cc;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    font-weight: 900;
+}
+
+.p2{
+    font-size: 1.5em;
+    font-weight: 2em;
+    text-shadow: 2px 1px 5px #f2f2f2;
+    position: relative;
+    left: 80px;
+    white-space: pre-wrap;width: 300px;
+    font-weight: 700;
+}
+
+.p3{
+    font-size: 1.8em;
+    color: #ff00ff;
+    text-shadow: 2px 0 5px #99ffff;
+    position: relative;
+    left: 10px;
+    top: -40px;
+}
+
+.底部{
+    height: 300px;
+    width: 500px;
+}
+
+.底部>p{
+    font-weight: 700;
+    font-size: 2em;
+    color: #ffcc45;
+    position: relative;
+    left: 275px;
+    top: 50px;
+}
+.底部 a{
+    font-size: 2em;
+    font-weight: 750;
+    position: relative;
+    top: 200px;
+    left: 1000px;
+}
+
+.展示卡2{
+    position: relative;
+    top: 500px;
+    left: 30px;
+}
+
+.展示卡2 p{
+    position: relative;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.展示卡2 img{
+    width: 400px;
+    height: 200px;
+}
+
+.展示卡2 a{
+    position: relative;
+    top: -85px;
+    left: 650px;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.p4{
+    font-size: 1.7em;
+    color: #ff00ff;
+    text-shadow: 2px 0 5px #99ffff;
+    position: relative;
+    left: 30px;
+    top: -20px;
+}
