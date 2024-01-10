@@ -11,7 +11,7 @@
     width: 100%;
     position: absolute; /*设置绝对定位，对 div顶部的绝对定位*/
     top: 0;
-    left: 0;
+    left: 40px;
     object-fit: cover; /* 保持视频的宽高比并填充整个容器 */
 }
 
@@ -29,6 +29,8 @@
 .左框{
     width: 450px;
     height: 100%;
+    position: relative;
+    top: 100px;
     /* border-方位词(right,bottom,left) */
     /* border-right: 1px dashed #000; */
     overflow: hidden;
@@ -248,9 +250,9 @@
 
 .展示卡2 a{
     position: relative;
-    top: -85px;
-    left: 650px;
-    font-size: 1.6em;
+    top: -70px;
+    left: 780px;
+    font-size: 1.4em;
     font-weight: bold;
 }
 
@@ -259,6 +261,6 @@
     color: #ff00ff;
     text-shadow: 2px 0 5px #99ffff;
     position: relative;
-    left: 30px;
-    top: -20px;
+    left: 20px;
+    top: -10px;
 }
